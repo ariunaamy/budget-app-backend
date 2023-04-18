@@ -12,8 +12,8 @@ app.get("/", (req,res)=>{
 
 app.use("/transactions", transactionsController)
 
-// app.get("*", (req,res) => {
-//     res.status(404).json({"error": "Page Not Found"})
-// })
+app.get("*", (req,res) => {
+    res.status(404).json({"error": "Page Not Found"})
+})
 
 module.exports = app; 
